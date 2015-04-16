@@ -134,9 +134,12 @@ finder(numbers);
 
 
 var str = 'this is my sentence';
-//Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
+//Write a function called reverse that takes in a given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
+var reverser = function(stringVal){
+  return stringVal.split('').reverse().join('')
+}
+reverser(str);
 
 
 //Next Problem
