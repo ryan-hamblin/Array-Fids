@@ -232,10 +232,18 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-var compareArrs = function(arr1, arr2){
-
+var longest = function(var1, var2){
+  if(var1.length < var2.length){
+     return var2;
+  }else if (var1.length > var2.length) {
+      return var1;
+    }
+    // just added extra for fun.. if they are the same size, this will return whichever has the shortest total digits
+    else if(String(var1.join("")).length < String(var2.join("")).length) {
+      return var2;
+    }
+  return var1;
 }
-
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -243,3 +251,19 @@ var compareArrs = function(arr1, arr2){
 */
 
   //Code Here
+var both = function (arr1, arr2){
+// helper function - returns new array with any duplicate numbers from two passed arrays
+var makeArray = function (small, big){
+  var tempArray = [];
+    for(var i=0; i<big.length; i++){
+      if ((small.indexOf(big[i]) != -1) && (tempArray.indexOf(big[i]) === -1))
+        tempArray.push(big[i]);
+    }
+  return tempArray;
+}
+  if(arr1.length <= arr2.length){
+    return makeArray(arr1, arr2);
+  }else {
+    return makeArray(arr2, arr1);
+  }
+}
