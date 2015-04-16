@@ -146,6 +146,28 @@ reverser(str);
 
 
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+
+var removeItem = function(theList, remover){
+  for (var i = 0; i < theList.length; i++) {
+    if(theList[i] === remover){
+      theList.splice(i,1);
+    }
+  }
+  return theList;
+}
+
+var addItem = function(theList, adder){
+  for (var i = 0; i < theList.length; i++) {
+    if(theList[i] !== adder){
+      theList.push(adder);
+      return theList;
+    }
+  };
+}
+
+removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+
 /*
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list,
   and adding new items to our list. 
@@ -158,13 +180,6 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   and the second is an item to add to your grocery list. In addItem add the item you passed in to
   myGroceryList then return the new, updated grocery list.
 */
-
-  //Code Here
-
-//removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
-
-
 
 //Next Problem
 
