@@ -191,15 +191,28 @@ addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
-//Next Problem
+var maker = function(){
+  var emptyArr = [];
+  for (var i = 0; i < 225; i++) {
+    emptyArr.push(i+1);
+  };
+  return emptyArr
+}
 
 
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
 
+var addTen = function (arr){
+  var myArray = [];
+  for(var i=0; i < arr.length; i++){
+    myArray[i] = +arr[i] + 10;
+  }
+  return myArray;
+};
+addTen(numbers);
 
 
 //Next Problem
@@ -219,7 +232,9 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-  //Code Here
+var compareArrs = function(arr1, arr2){
+
+}
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
